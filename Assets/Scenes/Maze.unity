@@ -2914,7 +2914,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 174663681}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 776167850}
@@ -3084,7 +3084,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 176817446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77b714741728a74daa3b8a8064ee621, type: 3}
+  m_Script: {fileID: 11500000, guid: 3962f32d2cf990e4e90458a6344c9905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Test
@@ -3132,7 +3132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 177493502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 1937931375}
@@ -4673,7 +4673,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 282456590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 1011240078}
@@ -11550,7 +11550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 747395604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 643b3ef6d0496bb4ebb747c6b8bc67e5, type: 3}
+  m_Script: {fileID: 11500000, guid: bb4dade3aa213ef48bd47fedabdd3844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Menu
@@ -12541,7 +12541,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 795422168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77b714741728a74daa3b8a8064ee621, type: 3}
+  m_Script: {fileID: 11500000, guid: 3962f32d2cf990e4e90458a6344c9905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Test
@@ -13480,7 +13480,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 848695588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 144710238}
@@ -13894,7 +13894,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 856859825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 2117813920}
@@ -14471,7 +14471,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 922144234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 1282852065}
@@ -15898,7 +15898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015097443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77b714741728a74daa3b8a8064ee621, type: 3}
+  m_Script: {fileID: 11500000, guid: 3962f32d2cf990e4e90458a6344c9905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Test
@@ -22811,7 +22811,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1517956558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 199904766}
@@ -25374,7 +25374,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1707723349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 2063571635}
@@ -28586,7 +28586,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1973686516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 754460163}
@@ -29345,7 +29345,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1995973723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 854574307}
@@ -30924,7 +30924,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2077628672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7142a636039dc4f9c8b17ccda0a80a, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b751b174e90564093bc25c0caf5caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointLight: {fileID: 1992281136}
