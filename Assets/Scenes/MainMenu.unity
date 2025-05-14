@@ -2155,37 +2155,37 @@ MonoBehaviour:
   m_text: '"Confectionery shelf" (https://skfb.ly/6VCVD) by Nommoc is licensed under
     Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
-    
+
 
     "Metal
     Shelf File_14MB" (https://skfb.ly/p7FNr) by Mehdi Shahsavan is licensed under
     Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
-    
+
 
     "Modular
     Plant Shelf" (https://skfb.ly/oLPpx) by sch0i is licensed under Creative Commons
     Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/).
 
-    
+
 
     "Istanbul
     Spice Stand in the egyptian bazaar" (https://skfb.ly/otQuw) by Shahriar Shahrabi
     is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
-    
+
 
     "Supermarket
     Drinks Shelf Asset" (https://skfb.ly/oGoNA) by Rendevr is licensed under Creative
     Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
-    
+
 
     "Fruit
     Stall - Work In Progress!" (https://skfb.ly/ZoXp) by Blayne Jackson is licensed
     under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
-    
+
 
     "Lightbulb"
     (https://skfb.ly/6WRNp) by wewwuworks is licensed under Creative Commons Attribution
@@ -2216,8 +2216,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
