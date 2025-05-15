@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class RapidGazeSimulator : MonoBehaviour
 {
     [Header("极速模式设置")]
@@ -95,22 +94,11 @@ public class RapidGazeSimulator : MonoBehaviour
             _currentSpeed *= 1.5f; // 靠近边缘时自动加速脱离
         }
     }
-    public class TrailEnhancer : MonoBehaviour
+
+    // 新增方法：增加速度
+    public void IncreaseSpeed()
     {
-        public GameObject trailPrefab;
-        public float spawnInterval = 0.1f;
-
-        private float _timer;
-
-        void Update()
-        {
-            _timer += Time.deltaTime;
-            if (_timer >= spawnInterval)
-            {
-                Instantiate(trailPrefab, transform.position, Quaternion.identity);
-                _timer = 0;
-            }
-        }
+        _currentSpeed *= 1.5f; // 将当前速度增加 50%
+        _speedTimer = speedCooldown; // 重置冷却时间
     }
-
 }
