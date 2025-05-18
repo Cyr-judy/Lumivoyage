@@ -6,6 +6,9 @@ public class Circle : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         // Òþ²Ø³õÊ¼×´Ì¬
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }

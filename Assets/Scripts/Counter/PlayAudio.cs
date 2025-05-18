@@ -7,7 +7,8 @@ public class PlayAudio : MonoBehaviour
     private bool isPlayer = false;
     private void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void Update()

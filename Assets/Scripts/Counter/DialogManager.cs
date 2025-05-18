@@ -31,6 +31,9 @@ public class DialogManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         ReadText(dialogDataFile);
         ShowDialogRow();
         //UpdateText("x","ÄãºÃ");

@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class ClickController : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     void Update()
     {
         // ¼ì²âÊó±êµã»÷
