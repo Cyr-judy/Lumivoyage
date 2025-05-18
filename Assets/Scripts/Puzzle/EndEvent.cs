@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class EndEvent : MonoBehaviour
 {
-    public void EndGame()
+    public GameObject About;
+    public GameObject Canvas;
+
+    // 打开主弹窗
+    public void ShowAbout()
     {
-        //结束游戏退出程序
-        Application.Quit();
+        About.SetActive(true);
+        Canvas.SetActive(false);
+    }
+
+
+    // 关闭子弹窗
+    public void CloseAbout()
+    {
+        About.SetActive(false);
     }
 }
