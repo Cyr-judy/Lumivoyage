@@ -1,32 +1,49 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-    public TextAsset dialogDataFile;//¶Ô»°ÎÄ±¾ÎÄ¼ş£¬CSV¸ñÊ½
-    public SpriteRenderer spriteLeft;//×ó²à½ÇÉ«Í¼Ïñ
-    public SpriteRenderer spriteRight;//ÓÒ²à½ÇÉ«Í¼Ïñ£¬ÕâÀïÎª¿Õ
-    public TMP_Text nameText;//½ÇÉ«Ãû×ÖÎÄ±¾
-    public TMP_Text dialogText;//¶Ô»°ÄÚÈİÎÄ±¾
+    public TextAsset dialogDataFile;//ï¿½Ô»ï¿½ï¿½Ä±ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½CSVï¿½ï¿½Ê½
+    public SpriteRenderer spriteLeft;//ï¿½ï¿½ï¿½ï¿½É«Í¼ï¿½ï¿½
+    public SpriteRenderer spriteRight;//ï¿½Ò²ï¿½ï¿½É«Í¼ï¿½ï¿½
+    public SpriteRenderer spriteMid;//ï¿½Ğ¼ï¿½ï¿½É«Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½Ê¾
+    public TMP_Text nameText;//ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½
+    public TMP_Text dialogText;//ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½
 
-    public List<Sprite> sprites = new List<Sprite>();//½ÇÉ«Í¼Æ¬ÁĞ±í
+    public List<Sprite> sprites = new List<Sprite>();//ï¿½ï¿½É«Í¼Æ¬ï¿½Ğ±ï¿½
 
-    Dictionary<string, Sprite> imageDic = new Dictionary<string, Sprite>();//½ÇÉ«Ãû×Ö¶ÔÓ¦Í¼Æ¬µÄ×Öµä
+    Dictionary<string, Sprite> imageDic = new Dictionary<string, Sprite>();//ï¿½ï¿½É«ï¿½ï¿½ï¿½Ö¶ï¿½Ó¦Í¼Æ¬ï¿½ï¿½ï¿½Öµï¿½
 
-    public int dialogIndex=0;//±£´æµ±Ç°µÄ¶Ô»°Ë÷ÒıÖµ
-    public string[] dialogRows;//¶Ô»°ÎÄ±¾£¬°´ĞĞ·Ö¸î
+    public int dialogIndex=0;//ï¿½ï¿½ï¿½æµ±Ç°ï¿½Ä¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+    public string[] dialogRows;//ï¿½Ô»ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ·Ö¸ï¿½
 
     public Button nextButton;
-    public GameObject OptionButton;//Ñ¡Ïî°´Å¥Ô¤ÖÆÌå
-    public Transform ButtonGroup;//Ñ¡Ïî°´Å¥¸¸½áµã£¬ÓÃÓÚ×Ô¶¯ÅÅÁĞ
+    public GameObject OptionButton;//Ñ¡ï¿½î°´Å¥Ô¤ï¿½ï¿½ï¿½ï¿½
+    public Transform ButtonGroup;//Ñ¡ï¿½î°´Å¥ï¿½ï¿½ï¿½ï¿½ã£¬ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
+
+    // æ–°å¢å¼¹çª—é…ç½®å­—æ®µ
+    [Header("å¤šçº§å¼¹çª—è®¾ç½®")]
+    public GameObject firstPopup;    // ç¬¬ä¸€ä¸ªå¼¹çª—é¢æ¿
+    public TMP_Text popup1Text;      // ç¬¬ä¸€ä¸ªå¼¹çª—çš„æ–‡æœ¬
+    public GameObject confirmPopup;  // ç¬¬äºŒä¸ªå¼¹çª—é¢æ¿
+    public TMP_Text popup2Text;      // ç¬¬äºŒä¸ªå¼¹çª—çš„æ–‡æœ¬
+
+    [TextArea]
+    public string popup1Content;    // ç¬¬ä¸€ä¸ªå¼¹çª—çš„æ–‡å­—ï¼ˆInspectorè®¾ç½®ï¼‰
+    [TextArea]
+    public string popup2Content;    // ç¬¬äºŒä¸ªå¼¹çª—çš„æ–‡å­—ï¼ˆInspectorè®¾ç½®ï¼‰
+
+    public UnityEvent onFinalConfirm; // æœ€ç»ˆç¡®è®¤å›è°ƒ
 
     private void Awake()
     {
-        imageDic["Ğ¡ĞÇ"] = sprites[0];
-        imageDic["ÊÕÒøÔ±"] = sprites[1];
+        imageDic["Ğ¡ï¿½ï¿½"] = sprites[0];
+        imageDic["ï¿½ï¿½ï¿½ï¿½Ô±"] = sprites[1];
+        imageDic["Ğ¡ï¿½ï¿½Ê¾"] = sprites[2];
     }
 
     private void Start()
@@ -36,8 +53,8 @@ public class DialogManager : MonoBehaviour
 
         ReadText(dialogDataFile);
         ShowDialogRow();
-        //UpdateText("x","ÄãºÃ");
-        //UpdateImage("Ğ¡ĞÇ", false);
+        //UpdateText("x","ï¿½ï¿½ï¿½");
+        //UpdateImage("Ğ¡ï¿½ï¿½", false);
     }
 
     private void Update()
@@ -45,19 +62,19 @@ public class DialogManager : MonoBehaviour
         
     }
 
-    public void UpdateText(string _name,string _text)//¸üĞÂÎÄ±¾ĞÅÏ¢
+    public void UpdateText(string _name,string _text)//ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ï¢
     {
         nameText.text = _name;
         dialogText.text = _text;
     }
 
-    public void UpdateImage(string _name,string _position)//¸üĞÂÍ¼Æ¬ĞÅÏ¢
+    public void UpdateImage(string _name,string _position)//ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ï¢
     {
-        if(_position == "×ó")
+        if(_position == "ï¿½ï¿½")
         {
             spriteLeft.sprite = imageDic[_name];
         }
-        else if(_position == "ÓÒ")
+        else if(_position == "ï¿½ï¿½")
         {
             spriteRight.sprite = imageDic[_name];
         }
@@ -70,7 +87,7 @@ public class DialogManager : MonoBehaviour
         //{
         //    string[] cell = row.Split(',');
         //}
-        Debug.Log("¶ÁÈ¡³É¹¦");
+        Debug.Log("ï¿½ï¿½È¡ï¿½É¹ï¿½");
     }
 
     public void ShowDialogRow()
@@ -83,7 +100,7 @@ public class DialogManager : MonoBehaviour
                 UpdateText(cells[2], cells[4]);
                 UpdateImage(cells[2], cells[3]);
 
-                dialogIndex = int.Parse(cells[5]); //¸üĞÂÌø×ª
+                dialogIndex = int.Parse(cells[5]); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ª
                 nextButton.gameObject.SetActive(true);
                 break;
             }
@@ -94,7 +111,8 @@ public class DialogManager : MonoBehaviour
             }
             else if(cells[0] == "END" && int.Parse(cells[1]) == dialogIndex)
             {
-                Debug.Log("¾çÇé½áÊø");
+                ShowFirstPopup();
+                break;
             }
         }
     }
@@ -110,7 +128,7 @@ public class DialogManager : MonoBehaviour
         if (cells[0] == "&")
         {
             GameObject button = Instantiate(OptionButton, ButtonGroup);
-            //°ó¶¨°´Å¥ÊÂ¼ş
+            //ï¿½ó¶¨°ï¿½Å¥ï¿½Â¼ï¿½
             button.GetComponentInChildren<TMP_Text>().text = cells[4];
             button.GetComponent<Button>().onClick.AddListener(
                 delegate { 
@@ -129,5 +147,33 @@ public class DialogManager : MonoBehaviour
         {
             Destroy(ButtonGroup.GetChild(i).gameObject);
         }
+    }
+
+    // ç¬¬ä¸€ä¸ªå¼¹çª—æ˜¾ç¤º
+    void ShowFirstPopup()
+    {
+        firstPopup.SetActive(true);
+        popup1Text.text = popup1Content;
+    }
+
+    // "æˆ‘ä»¬æƒ³è¯´"æŒ‰é’®ç‚¹å‡»
+    public void OnWeWantToSayClick()
+    {
+        firstPopup.SetActive(false);
+        ShowConfirmPopup();
+    }
+
+    // æ˜¾ç¤ºç¡®è®¤å¼¹çª—
+    void ShowConfirmPopup()
+    {
+        confirmPopup.SetActive(true);
+        popup2Text.text = popup2Content;
+    }
+
+    // æœ€ç»ˆç¡®è®¤
+    public void OnFinalConfirm()
+    {
+        confirmPopup.SetActive(false);
+        onFinalConfirm.Invoke();
     }
 }
