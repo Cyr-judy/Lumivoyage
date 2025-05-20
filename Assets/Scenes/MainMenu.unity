@@ -2967,6 +2967,7 @@ MonoBehaviour:
   Team: {fileID: 2013735714}
   Credits: {fileID: 1314769713}
   About: {fileID: 554463273}
+  nextSceneName: LeadIn
 --- !u!1 &2107609616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,7 +3050,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2107609619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2035804575}
+        m_TargetAssemblyTypeName: DialogController, Assembly-CSharp
+        m_MethodName: OnContinueButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2107609619
 MonoBehaviour:
   m_ObjectHideFlags: 0

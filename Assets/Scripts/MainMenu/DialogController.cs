@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogController : MonoBehaviour
 {
     public GameObject Team;
     public GameObject Credits;
     public GameObject About;
+    public string nextSceneName;
 
     // ´ò¿ªÖ÷µ¯´°
     public void ShowTeam()
@@ -40,6 +42,11 @@ public class DialogController : MonoBehaviour
     public void CloseAbout()
     {
         About.SetActive(false);
+    }
+
+    public void OnContinueButtonClicked()
+    {
+        SceneManager.LoadScene(nextSceneName);
     }
 }
 
