@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class EndEvent : MonoBehaviour
 {
+    public GameObject HomeToPuzzle;
     public GameObject About;
     public GameObject Canvas;
+
+    private void Start()
+    {
+        HomeToPuzzle.SetActive(true);
+    }
+
+    public void CloseHomeToPuzzle()
+    {
+        HomeToPuzzle.SetActive(false);
+    }
 
     // 打开主弹窗
     public void ShowAbout()
