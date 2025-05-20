@@ -7,6 +7,7 @@ public class EndEvent : MonoBehaviour
     public GameObject HomeToPuzzle;
     public GameObject About;
     public GameObject Canvas;
+    public GameObject PuzzleToRoad;
 
     private void Start()
     {
@@ -30,5 +31,6 @@ public class EndEvent : MonoBehaviour
     public void CloseAbout()
     {
         About.SetActive(false);
+        PuzzleToRoad.SetActive(true);
     }
 }
