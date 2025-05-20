@@ -8,7 +8,8 @@ public class DialogManager : MonoBehaviour
 {
     public TextAsset dialogDataFile;//对话文本文件，CSV格式
     public SpriteRenderer spriteLeft;//左侧角色图像
-    public SpriteRenderer spriteRight;//右侧角色图像，这里为空
+    public SpriteRenderer spriteRight;//右侧角色图像
+    public SpriteRenderer spriteMid;//中间角色图像，这里是小提示
     public TMP_Text nameText;//角色名字文本
     public TMP_Text dialogText;//对话内容文本
 
@@ -27,6 +28,7 @@ public class DialogManager : MonoBehaviour
     {
         imageDic["小星"] = sprites[0];
         imageDic["收银员"] = sprites[1];
+        imageDic["小提示"] = sprites[2];
     }
 
     private void Start()
