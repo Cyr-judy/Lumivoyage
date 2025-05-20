@@ -23,7 +23,7 @@ public class UIController : Singleton<UIController>
         Debug.Log("Current score: " + currentScore);
 
         // 检查是否达到目标分数
-        if (currentScore >= 3)
+        if (currentScore >= 2)
         {
             ShowFinishDialog();
         }
