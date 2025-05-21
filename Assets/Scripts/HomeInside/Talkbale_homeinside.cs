@@ -6,6 +6,9 @@ public class Talkbale_homeinside : MonoBehaviour
     [TextArea(1,3)]
     public string[] lines;
     [SerializeField] private bool hasName;
+    public bool showSceneButtonAtEnd;
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -24,7 +27,7 @@ public class Talkbale_homeinside : MonoBehaviour
     {
         if (isEntered && Input.GetKeyDown(KeyCode.Space)&&DialogueManager_homeinside.instance.dialogueBox.activeInHierarchy==false)
         {
-            DialogueManager_homeinside.instance.ShowDialogue(lines,hasName);
+            DialogueManager_homeinside.instance.ShowDialogue(lines,hasName, showSceneButtonAtEnd);
         }
     }
 }
