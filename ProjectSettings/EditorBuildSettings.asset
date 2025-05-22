@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HomeOutside.unity
     guid: c8c186c65d08fd340b24b450b6fc8feb
   - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: 124c38f6a693a72419aad754f13b0916
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: f5972a4017f04fe44978edfef0657113
   - enabled: 1
