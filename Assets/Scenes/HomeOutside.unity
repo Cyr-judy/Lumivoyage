@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c5da4ae18a11c4a8f792ba4c2d3ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: "\u8FD9\u662F\u901A\u5F80\u4FBF\u5229\u5E97\u7684\u8DEF"
+  displayText: 
   uiText: {fileID: 998186726}
   uiPanel: {fileID: 0}
 --- !u!1 &68390982
@@ -311,7 +311,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0012, y: 0.9878, z: 0}
-  m_LocalScale: {x: 0.6222956, y: 0.73121935, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.73121935, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2217,10 +2217,10 @@ RectTransform:
   - {fileID: 1702501402}
   m_Father: {fileID: 2110157110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 27.281982, y: 10.56073}
-  m_SizeDelta: {x: -526.2773, y: -327.3833}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 27.281982, y: 50}
+  m_SizeDelta: {x: 273.72272, y: 122.6167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234461641
 MonoBehaviour:
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c5da4ae18a11c4a8f792ba4c2d3ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: "\u8FD9\u662F\u901A\u5F80\u8D85\u5E02\u7684\u8DEF"
+  displayText: 
   uiText: {fileID: 1553575222}
   uiPanel: {fileID: 0}
 --- !u!1 &1433257126
@@ -2762,8 +2762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.745, y: 131.06}
-  m_SizeDelta: {x: 260.37, y: 103.79}
+  m_AnchoredPosition: {x: -5, y: 120}
+  m_SizeDelta: {x: 250, y: 110}
   m_Pivot: {x: 0.44212076, y: 1.7347575}
 --- !u!114 &1433257128
 MonoBehaviour:
@@ -2786,8 +2786,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_Font: {fileID: 12800000, guid: 031987466b44cbc48a185b3b3b1a5aea, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3071,7 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c5da4ae18a11c4a8f792ba4c2d3ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: "\u8FD9\u662F\u901A\u5F80\u4FBF\u5229\u5E97\u7684\u8DEF"
+  displayText: 
   uiText: {fileID: 998186726}
   uiPanel: {fileID: 0}
 --- !u!1 &1673136955
@@ -3753,7 +3753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c5da4ae18a11c4a8f792ba4c2d3ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: "\u8FD9\u662F\u901A\u5F80\u8D85\u5E02\u7684\u8DEF"
+  displayText: 
   uiText: {fileID: 1553575222}
   uiPanel: {fileID: 0}
 --- !u!1 &2110157106
