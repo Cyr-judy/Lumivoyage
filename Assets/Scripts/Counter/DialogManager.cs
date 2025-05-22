@@ -7,23 +7,23 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-    public TextAsset dialogDataFile;//�Ի��ı��ļ���CSV��ʽ
-    public SpriteRenderer spriteLeft;//����ɫͼ��
-    public SpriteRenderer spriteRight;//�Ҳ��ɫͼ��
-    public SpriteRenderer spriteMid;//�м��ɫͼ��������С��ʾ
-    public TMP_Text nameText;//��ɫ�����ı�
-    public TMP_Text dialogText;//�Ի������ı�
+    public TextAsset dialogDataFile;
+    public SpriteRenderer spriteLeft;
+    public SpriteRenderer spriteRight;
+    public SpriteRenderer spriteMid;
+    public TMP_Text nameText;
+    public TMP_Text dialogText;
 
-    public List<Sprite> sprites = new List<Sprite>();//��ɫͼƬ�б�
+    public List<Sprite> sprites = new List<Sprite>();
 
-    Dictionary<string, Sprite> imageDic = new Dictionary<string, Sprite>();//��ɫ���ֶ�ӦͼƬ���ֵ�
+    Dictionary<string, Sprite> imageDic = new Dictionary<string, Sprite>();
 
-    public int dialogIndex=0;//���浱ǰ�ĶԻ�����ֵ
-    public string[] dialogRows;//�Ի��ı������зָ�
+    public int dialogIndex=0;
+    public string[] dialogRows;
 
     public Button nextButton;
-    public GameObject OptionButton;//ѡ�ťԤ����
-    public Transform ButtonGroup;//ѡ�ť����㣬�����Զ�����
+    public GameObject OptionButton;
+    public Transform ButtonGroup;
 
     // 新增弹窗配置字段
     [Header("多级弹窗设置")]
@@ -41,9 +41,9 @@ public class DialogManager : MonoBehaviour
 
     private void Awake()
     {
-        imageDic["С��"] = sprites[0];
-        imageDic["����Ա"] = sprites[1];
-        imageDic["С��ʾ"] = sprites[2];
+        imageDic["小星"] = sprites[0];
+        imageDic["收银员"] = sprites[1];
+        imageDic["小提示"] = sprites[2];
     }
 
     private void Start()
@@ -53,8 +53,6 @@ public class DialogManager : MonoBehaviour
 
         ReadText(dialogDataFile);
         ShowDialogRow();
-        //UpdateText("x","���");
-        //UpdateImage("С��", false);
     }
 
     private void Update()
@@ -62,32 +60,29 @@ public class DialogManager : MonoBehaviour
         
     }
 
-    public void UpdateText(string _name,string _text)//�����ı���Ϣ
+    public void UpdateText(string _name,string _text)
     {
         nameText.text = _name;
         dialogText.text = _text;
     }
 
-    public void UpdateImage(string _name,string _position)//����ͼƬ��Ϣ
+    public void UpdateImage(string _name,string _position)
     {
-        if(_position == "��")
+        if(_position == "左")
         {
             spriteLeft.sprite = imageDic[_name];
         }
-        else if(_position == "��")
+        else if(_position == "右")
         {
             spriteRight.sprite = imageDic[_name];
         }
+        else spriteMid.sprite = imageDic[_name];
     }
 
     public void ReadText(TextAsset _textAsset)
     {
         dialogRows = _textAsset.text.Split('\n');
-        //foreach(var row in rows)
-        //{
-        //    string[] cell = row.Split(',');
-        //}
-        Debug.Log("��ȡ�ɹ�");
+        Debug.Log("读取成功");
     }
 
     public void ShowDialogRow()
@@ -100,7 +95,7 @@ public class DialogManager : MonoBehaviour
                 UpdateText(cells[2], cells[4]);
                 UpdateImage(cells[2], cells[3]);
 
-                dialogIndex = int.Parse(cells[5]); //������ת
+                dialogIndex = int.Parse(cells[5]);
                 nextButton.gameObject.SetActive(true);
                 break;
             }
@@ -128,7 +123,6 @@ public class DialogManager : MonoBehaviour
         if (cells[0] == "&")
         {
             GameObject button = Instantiate(OptionButton, ButtonGroup);
-            //�󶨰�ť�¼�
             button.GetComponentInChildren<TMP_Text>().text = cells[4];
             button.GetComponent<Button>().onClick.AddListener(
                 delegate { 
