@@ -7,6 +7,7 @@ public class Star : MonoBehaviour
     public string displayText; // 每个星星可以设置不同的文字
 
     public Text uiText; // 关联的UI Text组件
+    public GameObject uiPanel;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,13 +32,23 @@ public class Star : MonoBehaviour
             uiText.text = displayText;
             uiText.gameObject.SetActive(true);
         }
+
+        if (uiPanel != null)
+        {
+            uiPanel.SetActive(true); // 显示 Panel
+        }
     }
 
     private void HideText()
     {
-        if (uiText != null)
+        if (uiText != null )
         {
             uiText.gameObject.SetActive(false);
+        }
+
+        if (uiPanel != null)
+        {
+            uiPanel.SetActive(false); // 隐藏 Panel
         }
     }
 }

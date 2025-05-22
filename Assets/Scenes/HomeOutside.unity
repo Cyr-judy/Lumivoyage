@@ -228,6 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: "\u8FD9\u662F\u901A\u5F80\u4FBF\u5229\u5E97\u7684\u8DEF"
   uiText: {fileID: 998186726}
+  uiPanel: {fileID: 0}
 --- !u!1 &68390982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,7 +1583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &729849208
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2418,6 +2419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: "\u8FD9\u662F\u901A\u5F80\u4FBF\u5229\u5E97\u7684\u8DEF"
   uiText: {fileID: 998186726}
+  uiPanel: {fileID: 729849207}
 --- !u!114 &1289362656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,6 +2727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: "\u8FD9\u662F\u901A\u5F80\u8D85\u5E02\u7684\u8DEF"
   uiText: {fileID: 1553575222}
+  uiPanel: {fileID: 0}
 --- !u!1 &1433257126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,6 +3073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: "\u8FD9\u662F\u901A\u5F80\u4FBF\u5229\u5E97\u7684\u8DEF"
   uiText: {fileID: 998186726}
+  uiPanel: {fileID: 0}
 --- !u!1 &1673136955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3527,6 +3531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: "\u8FD9\u662F\u901A\u5F80\u8D85\u5E02\u7684\u8DEF"
   uiText: {fileID: 1553575222}
+  uiPanel: {fileID: 729849207}
 --- !u!114 &1736924881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3750,6 +3755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: "\u8FD9\u662F\u901A\u5F80\u8D85\u5E02\u7684\u8DEF"
   uiText: {fileID: 1553575222}
+  uiPanel: {fileID: 0}
 --- !u!1 &2110157106
 GameObject:
   m_ObjectHideFlags: 0
