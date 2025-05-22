@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (dialogueBox.activeInHierarchy)
+        if (dialogueBox != null && dialogueBox.activeInHierarchy)
         {
             if (Input.GetMouseButtonUp(0))
             {
