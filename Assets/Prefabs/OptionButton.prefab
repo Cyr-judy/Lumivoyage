@@ -188,8 +188,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u7EE7\u7EED"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bf9f055b016778547ba10a3b7ccc212b, type: 2}
-  m_sharedMaterial: {fileID: 1412664573401053410, guid: bf9f055b016778547ba10a3b7ccc212b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3f65d1edb5dfd94439562c63ef6b8e3c, type: 2}
+  m_sharedMaterial: {fileID: -5927747611879282459, guid: 3f65d1edb5dfd94439562c63ef6b8e3c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -15,6 +15,21 @@ public class MenuShortcut : MonoBehaviour
 
     void ReturnToMenu()
     {
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            GameState.savedPlayerPosition = player.transform.position;
+            Debug.Log("Saved player position: " + GameState.savedPlayerPosition);
+        }
+
+
         SceneManager.LoadScene(levelToLoad);
     }
 }
+
+
+public static class GameState
+{
+    public static Vector3? savedPlayerPosition = null;
+}
+
