@@ -14,6 +14,9 @@ public class MainMenuBtns : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         Debug.Log("MainMenuBtns script has started.");
         audioSource = GetComponent<AudioSource>(); // 获取 AudioSource 组件
     }

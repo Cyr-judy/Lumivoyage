@@ -28,7 +28,7 @@ public class ClickController_Level2 : MonoBehaviour
                     if (!circle.HasScoreAdded())
                     {
                         // 增加分数
-                        UIController.Instance.AddScore(1);
+                        UIController_level2.Instance.AddScore(1);
                         circle.isScoreAdded = true; // 标记已经加分
                     }
                 }

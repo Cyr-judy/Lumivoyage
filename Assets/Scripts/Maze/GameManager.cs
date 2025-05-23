@@ -18,4 +18,3 @@ public class MenuShortcut : MonoBehaviour
         SceneManager.LoadScene(levelToLoad);
     }
 }
-

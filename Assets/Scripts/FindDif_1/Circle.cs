@@ -15,6 +15,7 @@ public class Circle : MonoBehaviour
 
     public void ShowCircle()
     {
+       
         // 获取物体的父物体
         Transform parentTransform = transform.parent;
         if (parentTransform != null)

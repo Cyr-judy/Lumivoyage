@@ -11,6 +11,7 @@ public class StartDialogController : MonoBehaviour
     {
         // œ‘ æµØ¥∞
         ShowStartDialog();
+        SceneReturnData.source = SceneReturnData.ReturnSource.FromB;
     }
 
     public void ShowStartDialog()

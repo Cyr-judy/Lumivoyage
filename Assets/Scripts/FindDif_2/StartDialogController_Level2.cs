@@ -11,6 +11,7 @@ public class StartDialogController_Level2 : MonoBehaviour
     {
         // œ‘ æµØ¥∞
         ShowStartDialog();
+        SceneReturnData.source = SceneReturnData.ReturnSource.FromC;
     }
 
     public void ShowStartDialog()

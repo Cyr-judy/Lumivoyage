@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-public class UIController_level2 : Singleton_level2<UIController>
+public class UIController_level2 : Singleton_level2<UIController_level2>
 {
     public TMP_Text scoreText; // 得分文本
     public GameObject finishDialogPanel; // 完成弹窗面板
