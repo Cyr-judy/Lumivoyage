@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerRestorer : MonoBehaviour
 {
     [Header("返回场景 B 的目标位置")]
-    public Vector3 positionFromB = new Vector3(72.3f, 2f, -0.7f);
+    public Vector3 positionFromB = new Vector3(73f, 2f, -0.7f);
 
     [Header("返回场景 C 的目标位置")]
     public Vector3 positionFromC = new Vector3(5.6f, 2f, 36.9f); // 你自己设定的值
@@ -12,34 +12,43 @@ public class PlayerRestorer : MonoBehaviour
 
     void Start()
     {
-        if (SceneReturnData.source == SceneReturnData.ReturnSource.None)
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.Save();
+
+        if (PlayerPrefs.HasKey("ReturnFromScene"))
         {
-            Debug.Log("没有来自其他场景的返回，保持当前位置");
-            return;
+            string fromScene = PlayerPrefs.GetString("ReturnFromScene");
+            Debug.Log("PlayerPrefs 中 ReturnFromScene 的值是: " + fromScene);
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            if (player != null)
+            {
+                CharacterController cc = player.GetComponent<CharacterController>();
+                if (cc != null) cc.enabled = false;
+
+                if (fromScene == "FindDif_1")
+                {
+                    player.transform.position = positionFromB;
+                    Debug.Log("玩家从 SceneB 回来，设置位置为: " + positionFromB);
+                }
+                else if (fromScene == "FindDif_2")
+                {
+                    player.transform.position = positionFromC;
+                    Debug.Log("玩家从 SceneC 回来，设置位置为: " + positionFromC);
+                }
+
+                if (cc != null) cc.enabled = true;
+
+                fromScene = "None";
+                PlayerPrefs.DeleteKey("ReturnFromScene");
+                PlayerPrefs.Save();
+            }
         }
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
+        else
         {
-            Debug.LogWarning("Player 未找到");
-            return;
+            Debug.Log("PlayerPrefs 中没有 ReturnFromScene 这个键。");
         }
-
-        switch (SceneReturnData.source)
-        {
-            case SceneReturnData.ReturnSource.FromB:
-                player.transform.position = positionFromB;
-                Debug.Log("从 B 返回，玩家移动到：" + positionFromB);
-                break;
-
-            case SceneReturnData.ReturnSource.FromC:
-                player.transform.position = positionFromC;
-                Debug.Log("从 C 返回，玩家移动到：" + positionFromC);
-                break;
-        }
-
-        // 重置，防止下次也触发
-        SceneReturnData.source = SceneReturnData.ReturnSource.None;
     }
 }
 

@@ -51,6 +51,9 @@ public class DialogManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+
         ReadText(dialogDataFile);
         ShowDialogRow();
     }

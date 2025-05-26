@@ -11515,8 +11515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56676bb0fc165bb4dadd99ba6fd26a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionFromB: {x: 72.3, y: 2, z: -0.7}
-  positionFromC: {x: 5.6, y: 2, z: 36.9}
+  positionFromB: {x: 72.3, y: 0.08999991, z: -0.7}
+  positionFromC: {x: 5.6, y: 0.08999991, z: 36.9}
 --- !u!114 &747395608
 MonoBehaviour:
   m_ObjectHideFlags: 0
