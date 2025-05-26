@@ -976,9 +976,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99547265}
-        m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
-        m_MethodName: OnFinalConfirm
+      - m_Target: {fileID: 1491401201}
+        m_TargetAssemblyTypeName: JumpScene, Assembly-CSharp
+        m_MethodName: OnContinueButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2451,6 +2451,7 @@ GameObject:
   - component: {fileID: 1491401199}
   - component: {fileID: 1491401198}
   - component: {fileID: 1491401197}
+  - component: {fileID: 1491401201}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2548,6 +2549,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1491401201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491401196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5ca71e8f815b84bb2f764dce638508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: End
 --- !u!1 &1529543392
 GameObject:
   m_ObjectHideFlags: 0
