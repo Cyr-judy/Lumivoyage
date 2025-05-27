@@ -14,6 +14,8 @@ public class EndVideoPlayer : MonoBehaviour
         // 获取 VideoPlayer 组件
         videoPlayer = GetComponent<VideoPlayer>();
 
+        videoPlayer.isLooping = false;
+
         // 初始状态：视频不播放，UI 显示
         popupPanel.SetActive(true);
         backgroundImage.SetActive(true);
@@ -21,6 +23,8 @@ public class EndVideoPlayer : MonoBehaviour
 
         // 给按钮添加监听事件
         playButton.onClick.AddListener(OnPlayButtonClicked);
+
+        videoPlayer.loopPointReached += OnVideoEnd;
     }
 
     void OnPlayButtonClicked()
@@ -31,5 +35,11 @@ public class EndVideoPlayer : MonoBehaviour
 
         // 开始播放视频
         videoPlayer.Play();
+    }
+
+    void OnVideoEnd(VideoPlayer vp)
+    {
+        // 播放完成后暂停，以停留在最后一帧
+        vp.Pause();
     }
 }
