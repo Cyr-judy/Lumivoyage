@@ -7,6 +7,9 @@ public class ControlLight: MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked; // 锁定鼠标在屏幕中心
+        Cursor.visible = false;
+
         PointLight.SetActive(false);
     }
 
