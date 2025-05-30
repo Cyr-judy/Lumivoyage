@@ -7,6 +7,7 @@ public class EndVideoPlayer : MonoBehaviour
     public GameObject popupPanel;        // 弹窗的 Panel
     public GameObject backgroundImage;   // 背景图片
     public Button playButton;            // 弹窗中的播放按钮
+    public GameObject quitButton;
     private VideoPlayer videoPlayer;
 
     void Start()
@@ -19,6 +20,8 @@ public class EndVideoPlayer : MonoBehaviour
         // 初始状态：视频不播放，UI 显示
         popupPanel.SetActive(true);
         backgroundImage.SetActive(true);
+        quitButton.SetActive(false);
+
         videoPlayer.Pause(); // 确保视频没有播放
 
         // 给按钮添加监听事件
@@ -41,5 +44,11 @@ public class EndVideoPlayer : MonoBehaviour
     {
         // 播放完成后暂停，以停留在最后一帧
         vp.Pause();
+        quitButton.SetActive(true);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
